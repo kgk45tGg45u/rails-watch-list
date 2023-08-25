@@ -1,8 +1,9 @@
 <h1>All movies in this list</h1>
-<ul>
-  <% @bookmarks.each do |bookmark| %>
-    <li>Comment: <p><%= bookmark.comment %> </p><%= link_to "x", bookmark_path(bookmark), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
-    <p>Movie: <%= bookmark.movie.title %></p></li>
-  <% end %>
 
-</ul>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path(@list.photo.key, height: 1000, crop: :fill) unless @list.photo.attached? == false; %>');">
+  <div class="container">
+    <h1>Le Wagon brings <strong>tech skills</strong> to <strong>creative people</strong>!</h1>
+    <p style: color = "white";>Change your life and learn to code at one of our campuses around the world.</p>
+    <a class="btn btn-warning" href="#">View list</a>
+  </div>
+</div>
